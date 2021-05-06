@@ -120,7 +120,7 @@ function App() {
   const [expertModeStarted, setExpertModeStarted] = useState(false);
   const [helpOpen, setHelpOpen] = useState(false);
   const [showFinishScreen, setShowFinishScreen] = useState(false);
-  const [isNyNorsk] = useState(false);
+  const [isNyNorsk, setIsNynorsk] = useState(false);
 
   const resetTask = () => {
     const state = resetStates[`${currentTask}`];
@@ -1122,14 +1122,14 @@ function App() {
     resetState();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [menuOpen]);
-  /* 
+
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
     const isNN = urlParams.get("nn");
     if (isNN === "y") {
-      setNyNorsk(true);
+      setIsNynorsk(true);
     }
-  }, []); */
+  }, []);
 
   /* 
   useEffect(() => {
